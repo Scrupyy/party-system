@@ -2,7 +2,6 @@ package de.scrupy.party.server;
 
 import de.scrupy.party.core.config.ConfigManager;
 import de.scrupy.party.core.config.RedisConfig;
-import de.scrupy.party.core.player.Party;
 import de.scrupy.party.core.redis.RedisManager;
 import de.scrupy.party.server.packet.*;
 import de.scrupy.party.server.party.PartyRepository;
@@ -10,9 +9,7 @@ import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Map;
 import java.util.Scanner;
-import java.util.UUID;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -43,16 +40,6 @@ public class PartyServer {
                     running = false;
                     stop();
                     return;
-                }
-
-                if (next.equalsIgnoreCase("partys")) {
-                    Map<Integer, Party> partiesById = partyRepository.getPartiesById();
-                    Map<UUID, Party> partiesByPlayerId = partyRepository.getPartiesByPlayerId();
-                    Map<String, Party> partiesByPlayerName = partyRepository.getPartiesByPlayerName();
-
-                    System.out.println("partiesById: " + partiesById);
-                    System.out.println("partiesByPlayerId: " + partiesByPlayerId);
-                    System.out.println("partiesByPlayerName: " + partiesByPlayerName);
                 }
             }
         }, "Console-Reader");
