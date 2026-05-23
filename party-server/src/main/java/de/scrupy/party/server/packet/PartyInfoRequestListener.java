@@ -18,9 +18,8 @@ public class PartyInfoRequestListener implements RedisPacketListener {
     @NotNull
     private final ServerRedisPacketManager redisPacketManager;
 
-    public PartyInfoRequestListener(
-            @NotNull PartyRepository partyRepository,
-            @NotNull ServerRedisPacketManager redisPacketManager) {
+    public PartyInfoRequestListener(@NotNull PartyRepository partyRepository,
+                                    @NotNull ServerRedisPacketManager redisPacketManager) {
         this.partyRepository = partyRepository;
         this.redisPacketManager = redisPacketManager;
     }

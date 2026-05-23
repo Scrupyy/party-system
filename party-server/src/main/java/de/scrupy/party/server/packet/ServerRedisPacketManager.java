@@ -13,8 +13,7 @@ public class ServerRedisPacketManager extends RedisPacketManager {
     @NotNull
     private final ExecutorService executor;
 
-    public ServerRedisPacketManager(
-            @NotNull RedisHandler redisHandler, @NotNull ExecutorService executor) {
+    public ServerRedisPacketManager(@NotNull RedisHandler redisHandler, @NotNull ExecutorService executor) {
         super(redisHandler, RedisManager.PARTY_REQUEST_CHANNEL, RedisManager.PARTY_RESPONSE_CHANNEL);
         this.executor = executor;
     }

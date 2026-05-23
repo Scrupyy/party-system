@@ -24,8 +24,7 @@ public class PartyLeaveRequestListener implements RedisPacketListener {
     @NotNull
     private final RedisPacketManager redisPacketManager;
 
-    public PartyLeaveRequestListener(
-            @NotNull PartyRepository partyRepository, @NotNull RedisPacketManager redisPacketManager) {
+    public PartyLeaveRequestListener(@NotNull PartyRepository partyRepository, @NotNull RedisPacketManager redisPacketManager) {
         this.partyRepository = partyRepository;
         this.redisPacketManager = redisPacketManager;
     }

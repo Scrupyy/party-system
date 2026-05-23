@@ -20,8 +20,7 @@ public class PartyChatRequestListener implements RedisPacketListener {
     @NotNull
     private final RedisPacketManager redisPacketManager;
 
-    public PartyChatRequestListener(
-            @NotNull PartyRepository partyRepository, @NotNull RedisPacketManager redisPacketManager) {
+    public PartyChatRequestListener(@NotNull PartyRepository partyRepository, @NotNull RedisPacketManager redisPacketManager) {
         this.partyRepository = partyRepository;
         this.redisPacketManager = redisPacketManager;
     }

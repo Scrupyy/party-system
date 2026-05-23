@@ -33,11 +33,10 @@ public class PartyInviteRequestListener implements RedisPacketListener {
     @NotNull
     private final ExecutorService executor;
 
-    public PartyInviteRequestListener(
-            @NotNull RedisHandler redisHandler,
-            @NotNull PartyRepository partyRepository,
-            @NotNull RedisPacketManager redisPacketManager,
-            @NotNull ExecutorService executor) {
+    public PartyInviteRequestListener(@NotNull RedisHandler redisHandler,
+                                      @NotNull PartyRepository partyRepository,
+                                      @NotNull RedisPacketManager redisPacketManager,
+                                      @NotNull ExecutorService executor) {
         this.redisHandler = redisHandler;
         this.partyRepository = partyRepository;
         this.redisPacketManager = redisPacketManager;
